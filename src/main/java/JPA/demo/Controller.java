@@ -33,10 +33,9 @@ public class Controller {
         return A;
 
     }
- @GetMapping("/Get")
- void getBody(@RequestBody Person ob){
-        System.out.println(ob);
- }
-
+    @DeleteMapping(value = "/delete/{id}")
+    void delete(@PathVariable("id") int id){
+        ob.deleteById(id);
+    }
 
 }
